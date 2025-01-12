@@ -1,0 +1,41 @@
+/* Base styles for react-toggle */
+.react-toggle {
+  touch-action: pan-x;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.react-toggle-track {
+  width: 50px;
+  height: 24px;
+  padding: 0;
+  background-color: #d3d7e5;
+  /* Inactive color */
+  border-radius: 30px;
+  transition: all 0.2s ease;
+}
+
+.react-toggle--checked .react-toggle-track {
+  background-color: #030a70;
+  /* Active color */
+}
+
+.react-toggle-thumb {
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.25s ease;
+  position: absolute;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  left: 28px;
+  /* Adjust this value to match the track width */
+}

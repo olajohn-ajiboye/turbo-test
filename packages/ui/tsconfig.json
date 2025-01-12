@@ -1,10 +1,19 @@
 {
-  "extends": "@repo/typescript-config/react-library.json",
+  "extends": ["@giritoday/typescript-config/react-library.json", "@giritoday/typescript-config/base.json"],
+  "include": ["src"],
+  "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
-    "lib": ["dom", "ES2015"],
-    "sourceMap": true,
-    "types": ["jest", "node"]
-  },
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@types/*": ["./src/types/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@assets/*": ["./src/assets/*"]
+    },
+    "outDir": "dist",
+    "rootDir": "src"
+  }
 }
